@@ -1,5 +1,5 @@
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.graphql
-secret: thisismysupersecrettext
+secret: ${env:PRISMA_SECRET}
 # Remember to run 'prisma token' in prisma directory
 # to get the Bearer token for the :4466 playground.
