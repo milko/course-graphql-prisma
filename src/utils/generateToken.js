@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 const generateToken = (userId, duration = '7 days') => {
     return jwt.sign(
         { userId },
-        'thisisasecret',
+        process.env.JWT_SECRET,
         { expiresIn: duration }
     )
 }
